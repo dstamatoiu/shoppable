@@ -1,0 +1,27 @@
+{
+    "name":"Medicom",
+    "slug":"medicom",
+    "description":"Pharmaceutical Theme",
+    "author":"Mazharul Islam Suzon",
+    "version":"1.0.0",
+    "status":true,
+    "screenshot":[
+        {
+            "primary":"primary.jpg"
+        }
+    ],
+    "headerHook":[
+        {
+            "style":["medicom", "custom_frontend"],
+            "script":[],
+            "blade":[]
+        }
+    ],
+    "footerHook":[
+        {
+            "style":[],
+            "script":[],
+            "blade":[]
+        }
+    ]
+}

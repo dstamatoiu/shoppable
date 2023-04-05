@@ -1,0 +1,54 @@
+{
+    "name": "TestManage",
+    "alias": "testmanage",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TestManage\\Providers\\TestManageServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "nazmartMetaData": {
+        "style": [],
+        "admin_settings": {
+            "menu_item": [
+                {
+                    "id" : "test-settings-menu",
+                    "label": "Test Menu",
+                    "route": "tenant.admin .newsletter",
+                    "parent": null,
+                    "permissions": ["general-settings-page-settings", "general-settings-site-identity"],
+                    "icon": "mdi mdi-settings"
+                },
+                {
+                    "id" : "test-settings-menu-submenu",
+                    "label": "Test Sub Menu",
+                    "route": "tenant.admin.activity.log",
+                    "parent": "test-settings-menu",
+                    "permissions": ["general-settings-page-settings"]
+                }
+            ]
+        },
+        "header_hook": [],
+        "footer_hook": [],
+        "pageBuilderAddon": [
+            "Modules\\TestManage\\Http\\PageBuilder\\Addons\\TestAddon"
+        ],
+        "widgetBuilderAddon": [
+            "Modules\\TestManage\\Http\\WidgetBuilder\\Widgets\\FooterAbout"
+        ],
+        "paymentGateway": {
+            "name": "AliPay",
+            "slug": "alipay",
+            "tenant": false,
+            "chargeCustomerMethodNameSpace": "Modules\\TestManage\\Http\\Controllers\\TestManageController",
+            "chargeCustomerMethodName": "paymentGateway",
+            "test_mode" : false,
+            "status" : true,
+            "extraInfoMarkupBlade" : "ali_pay",
+            "logo_file" : "ali-pay.png"
+        }
+    }
+}
